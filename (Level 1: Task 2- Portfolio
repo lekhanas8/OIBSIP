@@ -10,12 +10,12 @@
   </head>
   <body>
     <header>
-      <h1>Aditya Konda</h1>
+      <h1>Lekhana S</h1>
       <p>Web Developer | Full Stack Developer</p>
     </header>
 
     <section id="about">
-      <img src="profile.jpg" alt="Aditya Konda" />
+      <img src="profil.jpg" alt="Lekhana S" />
     </section>
 
     <section id="about1">
@@ -27,7 +27,7 @@
     <section id="projects">
       <h2>Projects</h2>
       <div class="project">
-        <img src="project1.jpg" alt="Project 1" />
+        <img src="projet1.jpg" alt="Project 1" />
         <h3>Project 1</h3>
         <p>Designed and coded a responsive website for a local business.</p>
       </div>
