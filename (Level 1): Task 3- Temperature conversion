@@ -1,0 +1,38 @@
+window.oninput = function(event) {
+  var campo = event.target.id;
+
+  // DECIMALS
+  var i = document.getElementById("decimalTemp").value;
+    ºC.value = (ºC.value * 1).toFixed(i);
+    ºK.value = (ºK.value * 1).toFixed(i);
+    ºF.value = (ºF.value * 1).toFixed(i);
+    ºRa.value = (ºRa.value * 1).toFixed(i);
+  // TEMPERATURE
+  if (campo == "ºC") {
+    ºK.value = (ºC.value * 1 + 273.15).toFixed(i);
+    ºF.value = (ºC.value * 1.8 + 32).toFixed(i);
+    ºRa.value = ((ºC.value * 1 + 273.15) * 1.8).toFixed(i);
+  } 
+  else if (campo == "ºK") {
+    ºC.value = (ºK.value * 1 - 273.15).toFixed(i);
+    ºF.value = (ºK.value * 1.8 - 459.889).toFixed(i);
+    ºRa.value = (ºK.value * 1.8).toFixed(i);
+  }
+   else if (campo == "ºF") {
+    ºC.value = ((ºF.value * 1 - 32) / 1.8).toFixed(i);
+    ºK.value = ((ºF.value * 1 + 459.67) / 1.8).toFixed(i);
+    ºRa.value = (ºF.value * 1 + 459.67).toFixed(i);
+  } 
+    else if (campo == "ºRa") {
+    ºC.value = (ºRa.value / 1.8 - 273.15).toFixed(i);
+    ºK.value = (ºRa.value / 1.8).toFixed(i);
+    ºF.value = (ºRa.value * 1 - 459.67).toFixed(i);
+  }
+
+};
+<h3>Temperature <input type="number" min="0" max="12" value="0" id="decimalTemp" name="decimal" placeholder="Decimal"> <small>Decimals<small></h3>
+
+Celsius (ºC) <input id="ºC" type="number" min="-273.15" value="20">
+<br> Kelvin (K) <input id="ºK" type="number" min="0" value="293">
+<br> Farenheit (ºF) <input id="ºF" type="number" min="-459.67" value="68">
+<br> Rankine (ºRa) <input id="ºRa" type="number" min="0" value="528">
